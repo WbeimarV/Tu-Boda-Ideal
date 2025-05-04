@@ -11,10 +11,10 @@
 }
 
 body {
-    background-color: rgb(251, 180, 204);
     padding: 0px;
     margin: 0px;
     overflow-x: hidden;
+    width: 100%;
 }
 
 
@@ -74,7 +74,7 @@ body {
 
     #menu-toggle:checked~.hamburguesa .imagenx {
         display: block;
-        
+
     }
 
 
@@ -84,7 +84,7 @@ body {
 
     #menu-toggle:checked~.hamburguesa span {
         opacity: 0;
-        
+
     }
 
     .menu-opciones li a {
@@ -144,18 +144,28 @@ body {
         width: 15%;
         padding-top: 160px;
         position: absolute;
+    }
 
+    .imagenlado {
+        display: none;
+    }
 
+    .cabezajunta {
+        display: none;
     }
 
     .inicial .cajanosotros {
         padding-left: 50px;
         padding-top: 120px;
-        background-color: yellow;
+        background-color: rgb(251, 244, 94);
         font-family: sans-serif;
         font-size: xx-large;
         font-weight: 1000;
         color: blue;
+    }
+
+    .hola-aqui{ 
+        padding-top: 50px;
     }
 
     .cajanosotros div+div+div {
@@ -174,19 +184,16 @@ body {
 
     }
 
+    .fiestados{
+        width: 90%;
+    }
+
     .NUPCIALISTA {
         float: left;
     }
 
     .prueba {
         padding-left: 5px;
-    }
-
-    .imgfiesta {
-
-        width: 100%;
-        padding: 10px;
-        background-color: yellow;
     }
 
     .galeria {
@@ -464,34 +471,128 @@ body {
     }
 }
 
-@media (min-width: 768px)
- { 
-    .hamburguesa {
+@media (min-width: 768px) {
+
+    .hamburguesa,
+    #menu-toggle {
         display: none;
     }
 
     .menu {
-        padding: 0px;
-        margin: 0px;
-        background-color: rgb(251, 180, 204);
         width: 100%;
-        display: flex;                /* Esto lo hace un contenedor flexible */
-        justify-content: flex-end;    /* Esto alinea los ítems a la derecha */
-        align-items: center;
+        background-color: rgb(251, 180, 204);
     }
+
     .menu-opciones {
         display: flex;
+        justify-content: flex-end;
+        align-items: center;
         list-style: none;
         padding: 0;
-        margin-left: 40px; 
-        font-size: 100px;
+        margin: 0;
+        width: 100%;
+        font-size: 40px;
+        gap: 15px;
     }
-    .menu-opciones li {
-        margin-right: 30px;
-    }
-    .menu-opciones a{
+
+    .menu-opciones li a {
         color: black;
         text-decoration: none;
+        font-weight: bold;
+        white-space: nowrap;
     }
- 
+
+    .cajainicial {
+        font-size: 50px;
+        text-align: center;
+        width: 100%;
+        font-family: gulfs-display;
+        color: blue;
+        height: 500px;
+        background-color: rgb(251, 180, 204);
+    }
+
+    .cajainicial div+div+div {
+        display: inline-block;
+        position: relative;
+        z-index: 2;
+    }
+
+    .imagen1 {
+        width: 50%;
+        height: 700px;
+        border-end-end-radius: 30%;
+        border-end-start-radius: 30%;
+        border-start-end-radius: 30%;
+        border-start-start-radius: 30%;
+        position: absolute;
+        left: 25%;
+        padding-top: 30px;
+    }
+
+    .imagenlado {
+        border-radius: 20px;
+        position: absolute;
+        top: 10%;
+        left: 80%;
+        width: 150px;
+        height: 200px;
+    }
+
+    .pegatina {
+        position: absolute;
+        top: 485px;
+        left: 80%;
+        width: 150px;
+        height: 150px;
+    }
+
+    .cabezajunta {
+        position: absolute;
+        width: 300px;
+        height: 350px;
+        right: 80%;
+        padding-top: 150px;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 25%;
+        border-bottom-right-radius: 25%;
+       
+    }
+
+    .cajanosotros {
+        padding-top: 450px;
+        background-color: rgb(251, 244, 94);
+        width: 100%;
+        padding-right: 15%;
+        margin-right: 15%;
+      
+    }
+
+    .cajanosotros .cajamover{
+        padding-left: 50%;
+        padding-right: 10%;
+
+    }
+    .cajapalabra{
+        padding-left: 50%;
+        font-family: anybody;
+        padding-right: 10%;
+
+    }
+    .NUPCIALISTA{
+      padding-left: 50%;
+      font-size: 20px;
+      font-family:gulfs-display ;
+      padding-right: 10%;
+
+    }
+
+    .fiestados{
+        padding-left: 5%;
+        width: 350px;
+        height: 400px;
+        position:absolute;
+        margin-top: -440px;
+    }
 }
