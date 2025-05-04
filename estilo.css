@@ -11,415 +11,487 @@
 }
 
 body {
-    background-color: white;
+    background-color: rgb(251, 180, 204);
     padding: 0px;
     margin: 0px;
-}
-
-.menu {
-    background-color: antiquewhite;
-    position: relative;
-    z-index: 2;
-}
-
-#menu-toggle {
-    display: none;
-}
-
-.hamburguesa {
-    font-size: 30px;
-    cursor: pointer;
-    padding: 15px;
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 3;
-}
-
-.menu-opciones {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: none;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background-color: antiquewhite;
-    width: 150px;
-    text-align: right;
-    border: 1px solid pink;
-}
-
-.menu-opciones {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: none;
-    text-align: center;
-    font-size: 2rem;
-    background-color: pink;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-#menu-toggle:checked+.hamburguesa+.menu-opciones {
-    display: block;
-    padding: 100px 0 50px 0;
-    /* Esto lo centra y crea espacio */
-}
-
-.menu-opciones li a {
-    display: block;
-    padding: 20px;
-    color: black;
-    text-decoration: none;
-}
-
-
-header {
-    background-color: pink;
-    text-align: center;
-    text-size-adjust: 20px;
-
-}
-
-.menu {
-    background-color: antiquewhite;
-}
-
-.inicial .cajainicial {
-    height: 235px;
-    padding-top: 100px;
-    background-color: pink;
-    text-align: center;
-    font-family: gulfs-display;
-    font-size: xx-large;
-    font-weight: 1000;
-    color: blue;
-}
-
-.imagen1 {
-    width: 60%;
-    height: 200px;
-    border-end-end-radius: 30%;
-    border-end-start-radius: 30%;
-    border-start-end-radius: 30%;
-    border-start-start-radius: 30%;
-}
-
-.pegatina {
-    width: 15%;
-    padding-top: 160px;
-    position: absolute;
-
-
-}
-
-.inicial .cajanosotros {
-    padding-left: 50px;
-    padding-top: 120px;
-    background-color: yellow;
-    font-family: sans-serif;
-    font-size: xx-large;
-    font-weight: 1000;
-    color: blue;
-}
-
-.cajanosotros div+div+div {
-    color: black;
-    font-weight: 100;
-    font-size: medium;
-
-}
-
-.cajanosotros div+div+div+div {
-    padding-top: 20px;
-    color: black;
-    font-weight: 900;
-    font-size: small;
-
-
-}
-
-.NUPCIALISTA {
-    float: left;
-}
-
-.prueba {
-    padding-left: 5px;
-}
-
-.imgfiesta {
-
-    width: 100%;
-    padding: 10px;
-    background-color: yellow;
-}
-
-.galeria {
-
-    background-color: white;
-}
-
-.galeria .secciongaleria {
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-    padding-top: 10px;
-    background-color: white;
-    text-align: center;
-}
-
-.galeria .seccion1 {
-    display: flex;
-    margin: 0px;
-    padding: 0px;
-    background-color: white;
-    width: 100%;
-    justify-content: center;
-    overflow: hidden;
-
-}
-
-.galeria1 {
-    border-radius: 10px;
-    height: 200px;
-    width: 200px;
-    padding-right: 20px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-
-.galeria .seccion2 {
-    display: flex;
-    margin: 0px;
-    padding: 0px;
-    padding-top: 10px;
-    background: linear-gradient(to bottom, white 80px, coral 80px);
-    width: 100%;
-    height: 210px;
-    justify-content: center;
     overflow-x: hidden;
 }
 
-.galeria2 {
-    border-radius: 10px;
-    height: 150px;
-    width: 150px;
-    padding-right: 20px;
-    padding-left: 5px;
-    padding-right: 5px;
+
+@media (max-width: 767px) {
+    .menu-toggle {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        z-index: 1001;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    .hamburguesa {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 22px;
+        cursor: pointer;
+        z-index: 2;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .hamburguesa span {
+        display: block;
+        height: 4px;
+        background-color: black;
+        border-radius: 2px;
+        transition: 0.4s;
+    }
+
+    .menu-opciones {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: none;
+        text-align: center;
+        font-size: 2rem;
+        background-color: pink;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .imagenx {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30px;
+        height: 30px;
+    }
+
+    #menu-toggle:checked~.hamburguesa .imagenx {
+        display: block;
+        
+    }
+
+
+    #menu-toggle:checked~.menu-opciones {
+        display: block;
+    }
+
+    #menu-toggle:checked~.hamburguesa span {
+        opacity: 0;
+        
+    }
+
+    .menu-opciones li a {
+        display: block;
+        padding: 20px;
+        color: black;
+        text-decoration: none;
+    }
+
+    .contenido {
+        transition: margin-top 0.3s ease;
+    }
+
+    #menu-toggle:checked~.contenido {
+        margin-top: 250px;
+    }
+
+
+
+    .menu-opciones li a {
+        display: block;
+        padding: 20px;
+        color: black;
+        text-decoration: none;
+    }
+
+
+    header {
+        background-color: pink;
+        text-align: center;
+        text-size-adjust: 20px;
+
+    }
+
+
+    .inicial .cajainicial {
+        height: 235px;
+        padding-top: 100px;
+        background-color: pink;
+        text-align: center;
+        font-family: gulfs-display;
+        font-size: xx-large;
+        font-weight: 1000;
+        color: blue;
+    }
+
+    .imagen1 {
+        width: 60%;
+        height: 200px;
+        border-end-end-radius: 30%;
+        border-end-start-radius: 30%;
+        border-start-end-radius: 30%;
+        border-start-start-radius: 30%;
+    }
+
+    .pegatina {
+        width: 15%;
+        padding-top: 160px;
+        position: absolute;
+
+
+    }
+
+    .inicial .cajanosotros {
+        padding-left: 50px;
+        padding-top: 120px;
+        background-color: yellow;
+        font-family: sans-serif;
+        font-size: xx-large;
+        font-weight: 1000;
+        color: blue;
+    }
+
+    .cajanosotros div+div+div {
+        color: black;
+        font-weight: 100;
+        font-size: medium;
+
+    }
+
+    .cajanosotros div+div+div+div {
+        padding-top: 20px;
+        color: black;
+        font-weight: 900;
+        font-size: small;
+
+
+    }
+
+    .NUPCIALISTA {
+        float: left;
+    }
+
+    .prueba {
+        padding-left: 5px;
+    }
+
+    .imgfiesta {
+
+        width: 100%;
+        padding: 10px;
+        background-color: yellow;
+    }
+
+    .galeria {
+
+        background-color: white;
+    }
+
+    .galeria .secciongaleria {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        padding-top: 10px;
+        background-color: white;
+        text-align: center;
+    }
+
+    .galeria .seccion1 {
+        display: flex;
+        margin: 0px;
+        padding: 0px;
+        background-color: white;
+        width: 100%;
+        justify-content: center;
+        overflow: hidden;
+
+    }
+
+    .galeria1 {
+        border-radius: 10px;
+        height: 200px;
+        width: 200px;
+        padding-right: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+
+    .galeria .seccion2 {
+        display: flex;
+        margin: 0px;
+        padding: 0px;
+        padding-top: 10px;
+        background: linear-gradient(to bottom, white 80px, coral 80px);
+        width: 100%;
+        height: 210px;
+        justify-content: center;
+        overflow-x: hidden;
+    }
+
+    .galeria2 {
+        border-radius: 10px;
+        height: 150px;
+        width: 150px;
+        padding-right: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .precios .secprecio {
+        text-align: center;
+        border-bottom: 20px;
+    }
+
+    .precios .paquetes {
+        font-family: gulfs-display;
+        padding-left: 10px;
+        height: 100%;
+        font-size: xx-large;
+        background-color: pink;
+        color: coral;
+        font-weight: 900;
+        border-bottom: 1px;
+        border-bottom-color: black;
+        border-bottom-style: solid;
+    }
+
+    .precios .horas {
+        font-family: gulfs-display;
+        font-size: large;
+        padding-top: 30px;
+        padding-left: 10px;
+        background-color: pink;
+        color: blue;
+        font-size: 500;
+        font-weight: 500;
+        padding-bottom: 50px;
+    }
+
+    .linea {
+        text-align: center;
+        padding-left: 20%;
+        width: 30%;
+        height: 10px;
+        border: solid 1px black;
+        border-radius: 5px;
+        background-color: yellow;
+    }
+
+    .disco {
+        width: 20%;
+    }
+
+    .compromiso {
+        width: 50%;
+        float: left;
+        text-align: center;
+        background-color: yellow;
+        color: coral;
+        font-family: gulfs-display;
+        height: 250px;
+        font-size: 15px;
+        padding-top: 30px;
+    }
+
+    .ceremonia {
+        width: 50%;
+        float: left;
+        text-align: center;
+        font-family: gulfs-display;
+        color: blue;
+        height: 250px;
+        font-size: 15px;
+        padding-top: 30px;
+        background-color: white;
+    }
+
+    .sortijas {
+        padding-top: 220px;
+        display: flex;
+        position: absolute;
+        padding-left: 40%;
+    }
+
+    .sorijasimagen {
+        width: 100px;
+        height: 100px;
+    }
+
+    .digital {
+        width: 50%;
+        float: left;
+        text-align: center;
+        background-color: blue;
+        color: white;
+        font-family: gulfs-display;
+        height: 250px;
+        font-size: 15px;
+        padding-top: 30px;
+    }
+
+    .cabina {
+        width: 50%;
+        float: left;
+        text-align: center;
+        background-color: yellow;
+        color: blue;
+        font-family: gulfs-display;
+        height: 250px;
+        font-size: 15px;
+        padding-top: 30px;
+    }
+
+    .cara-feliz {
+        text-align: center;
+        padding-top: 20px;
+        padding-left: 10px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .carafeliz {
+        width: 50px;
+        height: 50px;
+    }
+
+    .carita-espacio {
+
+        border: solid 1px black;
+        background-color: red;
+        border-radius: 5px;
+        width: 120px;
+        text-align: left;
+
+    }
+
+    .carita-espacio:hover {
+        border: solid 1px black;
+        background-color: pink;
+        border-radius: 5px;
+        width: 120px;
+        text-align: right;
+    }
+
+    .mapa {
+        width: 95%;
+        float: left;
+        height: 300px;
+        padding-left: 5%;
+        padding-top: 50px;
+        font-family: gulfs-display;
+        font-size: 30px;
+        color: white;
+        background-color: black;
+    }
+
+    .mapaimagen {
+        height: 200px;
+        width: 100%;
+    }
+
+    .camara {
+        display: flex;
+        position: absolute;
+        padding-left: 50%;
+    }
+
+    .total {
+        font-family: gulfs-display;
+        background-color: red;
+
+    }
+
+    .total #total {
+        padding-left: 10%;
+        color: pink;
+    }
+
+    .total #valor {
+        padding-left: 10%;
+        color: yellow;
+        font-size: 40px;
+    }
+
+    .tu-boda {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .fecha {
+        margin: 0px;
+        padding-top: 0px;
+        padding-left: 5%;
+        width: 95%;
+        background-color: rgb(251, 180, 204);
+        font-family: gulfs-display;
+        font-size: 20px;
+        color: blue;
+
+    }
+
+    .parrafo {
+        color: black;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .boton-chat {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: yellow;
+        color: black;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-family: sans-serif;
+        font-size: 16px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        z-index: 999;
+    }
 }
 
-.precios .secprecio {
-    text-align: center;
-    border-bottom: 20px;
-}
+@media (min-width: 768px)
+ { 
+    .hamburguesa {
+        display: none;
+    }
 
-.precios .paquetes {
-    font-family: gulfs-display;
-    padding-left: 10px;
-    height: 100%;
-    font-size: xx-large;
-    background-color: pink;
-    color: coral;
-    font-weight: 900;
-    border-bottom: 1px;
-    border-bottom-color: black;
-    border-bottom-style: solid;
+    .menu {
+        padding: 0px;
+        margin: 0px;
+        background-color: rgb(251, 180, 204);
+        width: 100%;
+        display: flex;                /* Esto lo hace un contenedor flexible */
+        justify-content: flex-end;    /* Esto alinea los ítems a la derecha */
+        align-items: center;
+    }
+    .menu-opciones {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin-left: 40px; 
+        font-size: 100px;
+    }
+    .menu-opciones li {
+        margin-right: 30px;
+    }
+    .menu-opciones a{
+        color: black;
+        text-decoration: none;
+    }
+ 
 }
-
-.precios .horas {
-    font-family: gulfs-display;
-    font-size: large;
-    padding-top: 30px;
-    padding-left: 10px;
-    background-color: pink;
-    color: blue;
-    font-size: 500;
-    font-weight: 500;
-    padding-bottom: 50px;
-}
-
-.linea {
-    text-align: center;
-    padding-left: 20%;
-    width: 30%;
-    height: 10px;
-    border: solid 1px black;
-    border-radius: 5px;
-    background-color: yellow;
-}
-
-.disco {
-    width: 20%;
-}
-
-.compromiso {
-    width: 50%;
-    float: left;
-    text-align: center;
-    background-color: yellow;
-    color: coral;
-    font-family: gulfs-display;
-    height: 250px;
-    font-size: 15px;
-    padding-top: 30px;
-}
-
-.ceremonia {
-    width: 50%;
-    float: left;
-    text-align: center;
-    font-family: gulfs-display;
-    color: blue;
-    height: 250px;
-    font-size: 15px;
-    padding-top: 30px;
-    background-color: white;
-}
-
-.sortijas {
-    padding-top: 220px;
-    display: flex;
-    position: absolute;
-    padding-left: 40%;
-}
-
-.sorijasimagen {
-    width: 100px;
-    height: 100px;
-}
-
-.digital {
-    width: 50%;
-    float: left;
-    text-align: center;
-    background-color: blue;
-    color: white;
-    font-family: gulfs-display;
-    height: 250px;
-    font-size: 15px;
-    padding-top: 30px;
-}
-
-.cabina {
-    width: 50%;
-    float: left;
-    text-align: center;
-    background-color: yellow;
-    color: blue;
-    font-family: gulfs-display;
-    height: 250px;
-    font-size: 15px;
-    padding-top: 30px;
-}
-
-.cara-feliz {
-    text-align: center;
-    padding-top: 20px;
-    padding-left: 10px;
-    width: 50px;
-    height: 50px;
-}
-.carafeliz {
-    width: 50px;
-    height: 50px;
-}
-
-.carita-espacio {
-
-    border: solid 1px black;
-    background-color: red;
-    border-radius: 5px;
-    width: 120px;
-    text-align: left;
-
-}
-
-.carita-espacio:hover {
-    border: solid 1px black;
-    background-color: pink;
-    border-radius: 5px;
-    width: 120px;
-    text-align: right;
-}
-
-.mapa{
-    width: 95%;
-    float: left;
-    height: 300px;
-    padding-left: 5%;
-    padding-top: 50px;
-    font-family: gulfs-display;
-    font-size: 30px;
-    color: white;
-    background-color: black;
-}
-
-.mapaimagen{
-    height: 200px;
-    width: 100%;
-}
-.camara{
-    display: flex;
-    position:absolute;
-    padding-left: 50%;
-}
-
-.total{
-    font-family: gulfs-display;
-    background-color: red;
-
-}
-.total #total{
-    padding-left: 10%;
-    color: pink;
-}
-.total #valor{
-    padding-left: 10%;
-    color:yellow;
-    font-size: 40px;
-}
-.tu-boda{
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-}
-.fecha{
-    margin: 0px;
-    padding-top: 0px;
-    padding-left: 5%;
-    width: 95%;
-    background-color:rgb(251,180,204);
-    font-family: gulfs-display;
-    font-size: 20px;
-    color: blue;
-
-}
-.parrafo{
-    color: black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-.boton-chat {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: yellow;
-    color: black;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-family: sans-serif;
-    font-size: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    z-index: 999;
-  }
-  
