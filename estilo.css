@@ -184,6 +184,11 @@ body {
 
     }
 
+    .cajapalabra{
+        color: black;
+        font-size: anybody ;
+    }
+
     .fiestados {
         width: 90%;
     }
@@ -383,7 +388,7 @@ body {
     .carita-espacio {
 
         border: solid 1px black;
-        background-color: red;
+        background-color: coral;
         border-radius: 5px;
         width: 100%;
         text-align: left;
@@ -431,8 +436,12 @@ body {
 
     .total {
         font-family: gulfs-display;
-        background-color: red;
+        background-color: coral;
 
+    }
+
+    .envia{
+        display: none;
     }
 
     .total #total {
@@ -469,6 +478,10 @@ body {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
+    .fotofinalnovios{
+        display: none;
+    }
+
     .boton-chat {
         position: fixed;
         bottom: 20px;
@@ -487,6 +500,17 @@ body {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         cursor: pointer;
         z-index: 999;
+    }
+
+    .redes-sociales{
+        display: none;
+    }
+
+    .finaldeldocumento{
+        float: left;
+        width: 100%;
+        height: 50px;
+        background-color:rgb(251, 180, 204) ;
     }
 }
 
@@ -684,7 +708,7 @@ body {
             "paquetes paquetes    compromiso  ceremonia   digital"
             "horas    horas       compromiso  ceremonia   digital"
             "cabina   mapa        mapa        total       total "
-            "cabina   mapa        mapa        total       total";
+            "cabina   mapa        mapa        envia       envia";
     }
 
     .precios {
@@ -777,7 +801,7 @@ body {
     .carita-espacio {
 
         border: solid 1px black;
-        background-color: red;
+        background-color: coral;
         border-radius: 5px;
         width: 100%;
         text-align: left;
@@ -800,7 +824,13 @@ body {
     }
 
     .sortijas {
-        grid-area: sortijas;
+        padding-left: 35%;
+        padding-top: 250px;
+        position:absolute;
+    }
+    .sorijasimagen{
+        width: 100px;
+        height: 100px;
     }
 
     .digital {
@@ -880,7 +910,102 @@ body {
 
     .total {
         grid-area: total;
+        padding-top: 30px;
+        padding-left: 10%;
+        font-family: gulfs-display;
+        background-color: coral;
+        border: 1px solid black;
     }
 
+    #total{
+       
+        color:rgb(251, 180, 204);
+        font-size: 25px;
+    }
+    #valor{
+        font-size: 35px;
+        color:rgb(251, 244, 94) ;
 
+    }
+
+    .envia{
+        grid-area: envia;
+        padding-top: 30px;
+        padding-left: 10%;
+        font-family: gulfs-display;
+        background-color: rgb(251, 180, 204);
+        border: 1px solid black;
+    }
+
+    .envia #email{
+
+        color: coral;
+        font-size: 12px;
+    }
+
+    .envia #barra{
+        background-color: coral;
+        width: 60%;
+        height: 2px;
+    }
+
+    .fecha{
+        padding-top: 200px;
+        width: 50%;
+        height: 550px;
+        background-color: rgb(251, 180, 204);
+        font-family: gulfs-display;
+        color: blue;
+        font-size: 50px;
+        position: relative;
+        float: right;
+    }
+
+    .fecha .parrafo{
+        font-family: anybody;
+        font-size: 50px;
+        color: black;
+    }
+    .tu-boda, .fotofinal{
+        display: none;
+        width: 100%;
+        height: 400px;
+    }
+
+    .fotofinalnovios{
+        width: 50%;
+        height: 1000px;
+        float: left;
+    }
+    .redes-sociales{
+        width: 50%;
+        height: 250px   ;
+        float: right;
+    }
+
+    .boton-chat {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: yellow;
+        color: black;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-family: sans-serif;
+        font-size: 16px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        z-index: 999;}
+
+    .finaldeldocumento{
+        float: left;
+        width: 100%;
+        height: 100px;
+        background-color:rgb(251, 180, 204) ;
+    }
 }
